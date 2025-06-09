@@ -1,4 +1,4 @@
-/* Reset básico */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -14,15 +14,23 @@ body {
   align-items: center;
 }
 
+.backgroundLogo {
+  display: block;
+  margin: 0 auto;
+  width: auto;
+  height: auto;
+  margin-bottom: 2rem;
+}
+
 .container {
   width: 100%;
-  max-width: 400px;
+  height: 100%;
   padding: 2rem;
 }
 
 form {
   display: flex;
-  flex-direction: column;
+  flex-direction:column;
   gap: 2rem;
   padding: 2rem;
   border-radius: 20px;
@@ -30,6 +38,24 @@ form {
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
   backdrop-filter: blur(10px);
 }
+
+.formButtons {
+  display: flex;
+  flex-direction:row;
+  gap: 1rem;
+  align-self: center;
+  cursor: pointer;
+  padding: 0.8rem;
+  border: none;
+  border-radius: 10px;
+  transition: 0.3s ease;
+}
+
+form button:focus {
+  outline: none;
+  box-shadow: none;
+}
+
 
 form h1 {
   color: white;
@@ -51,18 +77,9 @@ form input::placeholder {
   color: #ccc;
 }
 
-form button {
-  padding: 0.8rem;
-  border: none;
-  border-radius: 10px;
-  font-size: 1rem;
-  cursor: pointer;
-  transition: 0.3s ease;
-}
-
 .continue {
   background-color: #ffffff;
-  color: #1f1c2c;
+  color: #000000;
 }
 
 .continue:hover {
