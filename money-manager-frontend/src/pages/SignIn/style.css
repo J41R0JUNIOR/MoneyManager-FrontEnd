@@ -7,26 +7,43 @@
 }
 
 body {
-  background: linear-gradient(to top, #4212b3, #8437ef);
-  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.backgroundLogo {
-  display: block;
-  margin: 0 auto;
-  width: auto;
-  height: auto;
-  margin-bottom: 2rem;
+html, body, #root {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+
+.fullscreen-background {
+  
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to top, #000000, #270081);
+  /* background-image: url('./../../assets/MM.png'); */
+  background-size: cover;
+  background-position: center;
+  z-index: -1;
 }
 
 .container {
+  position: relative;
   width: 100%;
   height: 100%;
   padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  
 }
+
 
 form {
   display: flex;
@@ -34,8 +51,8 @@ form {
   gap: 2rem;
   padding: 2rem;
   border-radius: 20px;
-  background-color: rgba(0, 0, 0, 0);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+  background-color: rgba(255, 255, 255, 0);
+  box-shadow: 0 0px 20px rgba(255, 255, 255, 0.189);
   backdrop-filter: blur(10px);
 }
 
@@ -45,7 +62,6 @@ form {
   gap: 1rem;
   align-self: center;
   cursor: pointer;
-  padding: 0.8rem;
   border: none;
   border-radius: 10px;
   transition: 0.3s ease;
@@ -58,18 +74,18 @@ form button:focus {
 
 
 form h1 {
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 2rem;
   margin-bottom: 10px;
 }
 
 form input {
   padding: 0.8rem 1rem;
-  border-radius: 10px;
+  border-radius: 90px;
   border: none;
   outline: none;
   background-color: rgba(255, 255, 255, 0.1);
-  color: white;
+  color: rgb(255, 255, 255);
   font-size: 1rem;
 }
 
@@ -86,13 +102,50 @@ form input::placeholder {
   background-color: #e6e6e6;
 }
 
-.signUp {
-  background-color: transparent;
-  border: 2px solid white;
-  color: white;
-}
-
 .signUp:hover {
   background-color: white;
   color: #1f1c2c;
+}
+
+.symbol {
+  position: absolute;
+  color: rgba(232, 232, 232, 0.23);
+  font-weight: bold;
+  pointer-events: none;
+}
+
+.symbol-dollar {
+  top: 5rem;
+  left: 5rem; 
+  font-size: 3.75rem;
+}
+
+.symbol-percent {
+  top: 10rem;
+  right: 8rem;
+  font-size: 2.25rem; 
+}
+
+.symbol-sum {
+  bottom: 8rem; 
+  left: 4rem;
+  font-size: 3rem;
+}
+
+.symbol-pi {
+  bottom: 5rem; 
+  right: 5rem;
+  font-size: 2.25rem; 
+}
+
+.symbol-plusminus {
+  top: 15rem; 
+  left: 33.3333%; 
+  font-size: 1.875rem;
+}
+
+.symbol-infinity {
+  top: 8rem; 
+  right: 25%;
+  font-size: 2.25rem; 
 }
