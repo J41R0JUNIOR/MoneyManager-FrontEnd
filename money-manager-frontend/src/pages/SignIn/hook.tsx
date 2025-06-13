@@ -1,22 +1,19 @@
 import axios from "axios"
-import { baseUrl } from "./../../utils/url"
-
+import { baseUrl } from "../../lib/url"
 
 const api = axios.create({
-    baseURL: baseUrl
+  baseURL: baseUrl
 })
 
 async function signIn(username: string, password: string) {
-  try {
-    const response = await api.post('auth/signIn', {
-      username,password
-    })
+  const response = await api.post('auth/signIn', {
+    username,
+    password
+  })
 
-  } catch (error) {
-    console.error('Login failed:', error)
-  }
+  return response.data 
 }
 
 export {
-    signIn
+  signIn
 }
